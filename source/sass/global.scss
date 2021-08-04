@@ -1,6 +1,7 @@
 // === ИМПРОТИРОВАННЫЕ ФАЙЛЫ СТИЛЕЙ ===
 @import "variables.scss";
 
+
 // === ГЛОБАЛЬНЫЕ СТИЛИ ===
 *,
 *::before,
@@ -21,10 +22,11 @@ body {
   min-width: $width--mobile;
   min-height: 100vh;
 
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: $default-font;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 27px;
+
   color: $black;
 
   // *** Для устранения горизонтальных скроллов в IE 11, Edge и Safari ***
