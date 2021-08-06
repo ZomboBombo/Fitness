@@ -13,6 +13,62 @@
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="">
   </head>
   <body>
-    <h1>Фитнес — наше всё.</h1>
+    <header class="site-header">
+      <h1 class="visually-hidden">Фитнес-центр «Supergym»</h1>
+
+      <div class="container site-header__top">
+        <a class="site-header__logo">
+          <img src="img/logo.svg" width="89" height="20" alt="Логотип фитнес-центра «Supergym»">
+        </a>
+
+        <ul class="site-header__contacts">
+          <li>
+            <a href="tel:88005555555">8-800-555-55-55</a>
+          </li>
+        </ul>
+      </div>
+
+      <section class="container main-block">
+        <h2 class="visually-hidden">Главный блок</h2>
+
+        <div class="main-block__column main-block__column--first">
+          <span class="main-block__city-name">Омск</span>
+
+          <div class="main-block__title-box">
+            <p class="main-block__title">Фитнес центр</p>
+
+            <ul class="main-block__list main-block__fitness-zones-list">
+              <li>Тренажёрный зал</li>
+              <li>Групповые занятия</li>
+              <li>Кардио-зона</li>
+            </ul>
+          </div>
+
+          <a href="#" class="button main-block__purchase-button" title="Перейти к секции «Абонементы»" aria-label="Перейти к секции «Абонементы»">Купить абонемент</a>
+        </div>
+
+        <div class="main-block__column main-block__column--second">
+          <picture>
+            <img src="img/fitness-man.jpg" width="500" height="556" alt="Картинка с изображением Фитнесмена">
+          </picture>
+
+          <ul class="main-block__list main-block__socials">
+            <li>
+              <a href="#">FB</a>
+            </li>
+            <li>
+              <a href="#">VK</a>
+            </li>
+            <li>
+              <a href="#">IG</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <footer class="site-footer">
+      <p>Здесь будет Подвал сайта</p>
+    </footer>
   </body>
 </html>
