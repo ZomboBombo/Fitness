@@ -22,11 +22,10 @@ body {
   min-width: $width--mobile;
   min-height: 100vh;
 
-  font-family: $default-font;
+  font-family: $primary-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-
   color: $black;
 
   // *** Для устранения горизонтальных скроллов в IE 11, Edge и Safari ***

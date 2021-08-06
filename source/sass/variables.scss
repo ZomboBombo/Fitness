@@ -2,15 +2,18 @@
 
 // *** для различных Ширин вьюпорта ***
 $width--mobile: 320px;
-$width--tablet: 768px;
-$width--desktop: 1200px;
+$width--tablet: 767px;
+$width--desktop: 1199px;
 
 
 // *** для Шрифтов ***
-$default-font: "Roboto Condensed", Arial, sans-serif;
+$primary-font: "Roboto Condensed", Arial, sans-serif;
 $additional-font: "Bebas Neue", Arial, sans-serif;
 
 
 // *** для Цветов ***
 $white: #ffffff;
 $black: #000000;
+
+$main-block-blue: #003d85;
+$main-block-red: #b80027;
