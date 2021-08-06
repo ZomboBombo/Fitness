@@ -1,0 +1,231 @@
+.main-block {
+  display: grid;
+  grid-template-columns:  minmax(min-content, 400px) 1fr;
+  grid-column-gap: 65px;
+}
+
+.main-block__column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  &--first {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    padding-bottom: 40px;
+  }
+}
+
+.main-block__city-name {
+  margin: 0;
+  padding: 0;
+
+  font-family: $additional-font;
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 59px;
+  letter-spacing: 0.03em;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.main-block__title-box {
+  position: relative;
+}
+
+.main-block__title {
+  max-width: 300px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $additional-font;
+  font-size: 109px;
+  font-weight: 700;
+  line-height: 109px;
+  text-align: right;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+
+  // --- Мини-настройка для эффекта утолщения текста с помощью внешней обводки ---
+  text-shadow: -2px -2px 0 $white, 2px -2px 0 $white, 2px 2px 0 $white, -2px 2px 0 $white;
+}
+
+.main-block__list {
+  @include markerless;
+}
+
+.main-block__fitness-zones-list {
+  position: absolute;
+  left: -80px;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: right;
+  color: $white;
+}
+
+.main-block__purchase-button {
+  max-width: 230px;
+  min-height: 58px;
+
+  margin-top: 80px;
+}
+
+.main-block__socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  width: 100%;
+  max-width: 200px;
+  max-height: 400px;
+
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+
+.main-block__socials li {
+  margin: 0;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  padding: 0;
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-block__socials a {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  $properties-for-transition: opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.main-block__socials a:hover,
+.main-block__socials a:focus {
+  outline: 2px solid $white;
+  outline-offset: 4px;
+}
+
+.main-block__socials a:active {
+  opacity: 0.7;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .main-block {
+    grid-column-gap: 30px;
+  }
+
+  .main-block__city-name {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .main-block__title {
+    max-width: 236px;
+
+    font-size: 86px;
+    line-height: 86px;
+  }
+
+  .main-block__fitness-zones-list {
+    bottom: 18px;
+  }
+
+  .main-block__purchase-button {
+    max-width: 184px;
+    margin-top: 60px;
+  }
+
+  .main-block__column--second img {
+    width: 324px;
+    height: 390px;
+  }
+
+  .main-block__socials {
+    display: none;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 60px;
+  }
+
+  .main-block__column {
+
+    &--first {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    &--second {
+      display: none;
+    }
+  }
+
+  .main-block__city-name {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .main-block__title {
+    max-width: 214px;
+
+    font-size: 78px;
+    line-height: 78px;
+  }
+
+  .main-block__purchase-button {
+    max-width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

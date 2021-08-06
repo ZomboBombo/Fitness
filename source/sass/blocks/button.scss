@@ -1,0 +1,37 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-width: 206px;
+
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: 4px solid $white;
+
+  $properties-for-transition: color, background-color, opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.button:hover,
+.button:focus {
+  color: $main-block-blue;
+  background-color: $white;
+}
+
+.button:active {
+  opacity: 0.7;
+}

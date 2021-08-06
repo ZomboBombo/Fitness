@@ -1,5 +1,103 @@
 .site-header {
+  width: 100%;
+  min-height: 658px;
 
-  // Tempo
-  outline: 2px solid red;
+  background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
+}
+
+.site-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 52px;
+}
+
+.site-header__contacts {
+  @include markerless;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: auto;
+  max-width: 800px;
+}
+
+.site-header__contacts li {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-header__contacts a {
+  font-family: $additional-font;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: $white;
+  text-decoration: none;
+
+
+  $properties-for-transition: text-shadow, opacity;
+
+  @include transition-settings($properties-for-transition);
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.site-header__contacts a:hover,
+.site-header__contacts a:focus {
+  text-shadow: -1px -1px 0 $main-block-red, 1px -1px 0 $main-block-red, 1px 1px 0 $main-block-red, -1px 1px 0 $main-block-red, -1px -1px 1.5em $white, 1px -1px 1.5em $white, 1px 1px 1.5em $white, -1px 1px 1.5em $white;
+}
+
+.site-header__contacts a:active {
+  opacity: 0.7;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .site-header {
+    min-height: 554px;
+    background-image: conic-gradient(from 139.4deg at 20.7% 35.74%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
+  }
+
+  .site-header__top {
+    min-height: 82px;
+  }
+
+  .site-header__contacts a {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .site-header {
+    min-height: 492px;
+    background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
+  }
+
+  .site-header__top {
+    min-height: 55px;
+  }
+
+  .site-header__contacts a {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
