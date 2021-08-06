@@ -1,4 +1,31 @@
 .container {
+  width: 100%;
+  max-width: $width--desktop;
+
   margin: 0 auto;
   padding: 0;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .container {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
