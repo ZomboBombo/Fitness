@@ -12,6 +12,7 @@
 *** 2. Универсальные стили ***
 *************************** */
 @import "blocks/container.scss";
+@import "blocks/button.scss";
 
 
 /* **********************
@@ -22,3 +23,7 @@
 @import "blocks/site-header.scss";
 @import "blocks/site-main-content.scss";
 @import "blocks/site-footer.scss";
+
+
+// --- 3.2) стили для секции "Главный блок" ---
+@import "blocks/main-block.scss";
