@@ -1,8 +1,23 @@
 .main-block {
   display: grid;
-  grid-template-columns:  minmax(min-content, 400px) 1fr;
+  grid-template-rows: auto;
+  grid-template-columns: 400px 1fr;
   grid-column-gap: 65px;
 }
+
+/*
+*** Настройки позиционирования Grid Layout для IE 11: НАЧАЛО ***
+*/
+.main-block > .main-block__column--first {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.main-block > .main-block__column--second {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+// *** Настройки позиционирования Grid Layout для IE 11: КОНЕЦ ***
 
 .main-block__column {
   display: flex;
@@ -16,6 +31,10 @@
     align-items: flex-end;
 
     padding-bottom: 40px;
+  }
+
+  &--second {
+    position: relative;
   }
 }
 
@@ -80,17 +99,25 @@
   min-height: 58px;
 
   margin-top: 80px;
+  padding-top: 19px;
 }
 
 .main-block__socials {
+  // --- Настройки позиционирования для корректного отображения в IE 11 ---
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-end;
   align-content: flex-end;
 
   width: 100%;
   max-width: 200px;
+  height: 400px;
   max-height: 400px;
 
   margin-top: auto;
@@ -99,14 +126,9 @@
 
 .main-block__socials li {
   margin: 0;
-  margin-bottom: 24px;
+  margin-top: 24px;
   margin-left: 24px;
   padding: 0;
-
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .main-block__socials a {

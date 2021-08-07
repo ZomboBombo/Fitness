@@ -2,7 +2,13 @@
   width: 100%;
   min-height: 658px;
 
-  background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
+  background-color: $main-block-red;
+  // background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg), url("../img/main-block-background--desktop.jpg");
+  background-image: url("../img/main-block-background--desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
 }
 
 .site-header__top {
@@ -33,6 +39,9 @@
 }
 
 .site-header__contacts a {
+  position: relative;
+  z-index: 1;
+
   font-family: $additional-font;
   font-size: 26px;
   line-height: 26px;
@@ -41,18 +50,39 @@
   text-decoration: none;
 
 
-  $properties-for-transition: text-shadow, opacity;
+  $properties-for-transition: color, opacity;
 
   @include transition-settings($properties-for-transition);
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    width: 120%;
+    min-height: 120%;
+
+    background-color: transparent;
+    border: 4px solid transparent;
+
+    $properties-for-transition: border-color;
+
+    @include transition-settings($properties-for-transition);
+  }
 }
 
 
 /*
 *** Стили для интерактивности ***
 */
-.site-header__contacts a:hover,
-.site-header__contacts a:focus {
-  text-shadow: -1px -1px 0 $main-block-red, 1px -1px 0 $main-block-red, 1px 1px 0 $main-block-red, -1px 1px 0 $main-block-red, -1px -1px 1.5em $white, 1px -1px 1.5em $white, 1px 1px 1.5em $white, -1px 1px 1.5em $white;
+.site-header__contacts a:hover::before,
+.site-header__contacts a:focus::before {
+  border-color: $white;
 }
 
 .site-header__contacts a:active {
