@@ -14,6 +14,13 @@
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin>
   </head>
   <body>
+    <!--
+      *** SVG-спрайт ***
+    -->
+    <div style="display: none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
     <header class="site-header">
       <h1 class="visually-hidden">Фитнес-центр «Supergym»</h1>
 
@@ -36,7 +43,7 @@
           <span class="main-block__city-name">Омск</span>
 
           <div class="main-block__title-box">
-            <p class="main-block__title">Фитнес центр</p>
+            <p class="section-title main-block__title">Фитнес центр</p>
 
             <ul class="main-block__list main-block__fitness-zones-list">
               <li>Тренажёрный зал</li>
@@ -67,6 +74,46 @@
         </div>
       </section>
     </header>
+
+    <main class="site-main-content">
+      <section class="container gym-section">
+        <div class="gym-section__column gym-section__column--first">
+          <div class="gym-section__title-box">
+            <h2 class="section-title gym-section__title">Тренажерный зал</h2>
+            <p class="gym-section__title-description">Просторный зал площадью 900 кв/м</p>
+          </div>
+
+          <div class="gym-section__description">
+            <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+
+            <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          </div>
+        </div>
+
+        <div class="gym-section__column gym-section__column--second">
+          <picture>
+            <img src="img/gym--desktop.jpg" srcset="img/gym--desktop.jpg 660w, img/gym--tablet.jpg 678w, img/gym--mobile.jpg 320w" sizes="(max-width: 450px) 320px, (max-width: 1199px) 678px, 660px" width="660" height="401" class="gym-section__main-image" alt="Фотография тренажёрного зала">
+          </picture>
+
+          <div class="gym-section__fake-video-container fake-video-container">
+            <div class="fake-video-container__inner-wrapper">
+              <picture>
+                <img src="img/video-preview-gym.jpg" srcset="img/video-preview-gym.jpg 354w, img/video-preview-gym--mobile.jpg 320w" sizes="(max-width: 767px) 320px, 354px" width="364" height="228" class="fake-video-container__preview-image" alt="Превью для видео о тренажёрном зале">
+              </picture>
+
+              <div class="fake-video-container__play-button-box">
+                <button type="button" class="fake-video-container__play-button" title="Воспроизвести видео" aria-label="Воспроизвести видео">
+                  Воспроизвести
+                  <svg width="13" height="15" class="fake-video-container__play-button-icon">
+                    <use xlink:href="#icon-play"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">
       <p>Здесь будет Подвал сайта</p>
