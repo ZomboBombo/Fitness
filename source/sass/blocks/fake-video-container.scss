@@ -1,0 +1,156 @@
+.fake-video-container {
+  position: absolute;
+  top: 288px;
+  left: -63px;
+}
+
+.fake-video-container__inner-wrapper {
+  position: relative;
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(20, 54, 122, 0.5);
+  }
+}
+
+.fake-video-container__play-button-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.fake-video-container__play-button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 72px;
+  height: 72px;
+
+  font-size: 0;
+
+  background-color: $main-block-red;
+  background-image: linear-gradient(44.89deg, $main-block-blue 25.38%, $main-block-red 74.89%);
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  $properties-for-transition: transform, opacity;
+
+  @include transition-settings($properties-for-transition);
+
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100px;
+    height: 100px;
+
+    background-color: transparent;
+    background-image: url("../img/play-button-outline.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    opacity: 0.2;
+
+    $properties-for-transition: opacity;
+
+    @include transition-settings($properties-for-transition);
+  }
+}
+
+.fake-video-container__play-button-icon {
+  fill: $white;
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.fake-video-container__play-button:hover,
+.fake-video-container__play-button:focus {
+  background-image: linear-gradient(44.89deg, $main-block-red 25.38%, $main-block-blue 74.89%);
+  transform: scale(1.1);
+}
+
+.fake-video-container__play-button:active {
+  transform: scale(0.9);
+  opacity: 0.7;
+}
+
+.fake-video-container__play-button:hover::before,
+.fake-video-container__play-button:focus::before {
+  opacity: 1;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .fake-video-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .fake-video-container__preview-image {
+    width: 266px;
+    height: 167px;
+  }
+
+  .fake-video-container__play-button {
+    width: 52px;
+    height: 52px;
+
+
+    &::before {
+      width: 73px;
+      height: 73px;
+    }
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .fake-video-container {
+    position: static;
+    transform: translate(0, 0);
+
+    width: 100%;
+    max-width: 450px;
+    min-width: 320px;
+
+
+    margin-top: 40px;
+  }
+
+  .fake-video-container__preview-image {
+    width: 100%;
+    height: 167px;
+    object-fit: cover;
+  }
+}

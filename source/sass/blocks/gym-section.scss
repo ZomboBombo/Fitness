@@ -1,0 +1,145 @@
+.gym-section {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 65px;
+
+  margin-top: 120px;
+  padding-bottom: 235px;
+
+  background-color: $white;
+}
+
+.gym-section__column {
+  &--second {
+    position: relative;
+  }
+}
+
+.gym-section__title-box {
+  margin-top: 60px;
+}
+
+.gym-section__title {
+  margin: 0;
+  padding: 0;
+}
+
+.gym-section__title-description {
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: $main-text-color;
+}
+
+.gym-section__description {
+  max-width: 355px;
+  margin-top: 55px;
+}
+
+.gym-section__description p {
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: $main-text-color;
+
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .gym-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 100px;
+    padding-bottom: 183px;
+  }
+
+  .gym-section__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+
+    &--second {
+      margin-top: 50px;
+    }
+  }
+
+  .gym-section__title-box {
+    margin-top: 0;
+  }
+
+  .gym-section__main-image {
+    width: 678px;
+    height: 345px;
+  }
+
+  .gym-section__description {
+    max-width: 502px;
+    margin-top: 50px;
+  }
+
+  .gym-section__description p {
+    text-align: center;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .gym-section {
+    margin-top: 70px;
+  }
+
+  .gym-section__column {
+    &--second {
+      margin-top: 40px;
+    }
+  }
+
+  .gym-section__title-box {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .gym-section__main-image {
+    max-width: 100%;
+    min-width: 320px;
+    height: 313px;
+    object-fit: cover;
+  }
+
+  .gym-section__description {
+    margin-top: 40px;
+  }
+
+  .gym-section__description p {
+    text-align: left;
+  }
+}
