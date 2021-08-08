@@ -1,0 +1,33 @@
+.section-title {
+  font-family: $additional-font;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  text-transform: uppercase;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .section-title {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .section-title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
