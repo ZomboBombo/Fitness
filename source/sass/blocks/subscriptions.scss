@@ -104,7 +104,6 @@
   @include markerless;
 
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
 
