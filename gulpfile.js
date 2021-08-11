@@ -60,7 +60,7 @@ gulp.task('css', () => {
     sourcemap.init(),
     sass(),
     postcss([
-      autoprefixer({ grid: 'autoplace' })
+      autoprefixer()
     ]),
     csso(),
     rename('styles.min.css'),
