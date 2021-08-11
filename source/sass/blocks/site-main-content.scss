@@ -1,3 +1,30 @@
-.site-main-content {
+.site-main-content__color-section {
+  position: relative;
+  z-index: 1;
 
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: $section-background;
+}
+
+.site-main-content__color-section-image {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  z-index: -1;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .site-main-content__color-section-image {
+    display: none;
+  }
 }

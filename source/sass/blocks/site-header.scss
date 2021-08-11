@@ -3,21 +3,7 @@
   min-height: 658px;
 
   background-color: $main-block-red;
-  // --- Настройка для совместимости с IE 11 ---
-  /*
-  *** Св-во "background-image" продублировано намеренно.
-  *** Намеренно св-ва идут именно в таком порядке, а не записаны в теле
-  *** одного "background-image" через запятую.
-  ***
-  *** Сделано это из-за того, что IE 11 не поддерживает цветовую ф-цию "conic-gradient()"
-  *** и, при записи в одном "background-image", полностью отключает св-во, как некорректное.
-  ***
-  *** В данном случае, все нормальные современные браузеры переопределяют первую запись "background-image",
-  *** а IE 11 просто ругается на "некорректность" второго св-ва.
-  */
-  background-image: url("../img/main-block-background--desktop.jpg");
   background-image: conic-gradient(from 130.31deg at 16.03% 39.06%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
-
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -113,7 +99,6 @@
 @media (max-width: $width--desktop) {
   .site-header {
     min-height: 554px;
-    background-image: url("../img/main-block-background--tablet.jpg");
     background-image: conic-gradient(from 139.4deg at 20.7% 35.74%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
   }
 
@@ -133,7 +118,6 @@
 @media (max-width: $width--tablet) {
   .site-header {
     min-height: 492px;
-    background-image: url("../img/main-block-background--mobile.jpg");
     background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
   }
 
