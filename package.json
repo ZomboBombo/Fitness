@@ -21,6 +21,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "8.0.0",
     "gulp-webp": "4.0.1",
+    "merge-stream": "2.0.0",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "1.7.1",
     "readable-stream": "3.6.0",
