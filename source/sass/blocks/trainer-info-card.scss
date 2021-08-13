@@ -1,0 +1,60 @@
+.trainer-info-card {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.trainer-info-card a {
+  position: relative;
+  display: block;
+}
+
+.trainer-info-card span {
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: $white;
+  text-align: center;
+}
+
+.trainer-info-card img {
+  width: 100%;
+  height: auto;
+}
+
+.trainer-info-card__hidden-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba(16, 38, 84, 0.9);
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.trainer-info-card a:hover > .trainer-info-card__hidden-info,
+.trainer-info-card a:focus > .trainer-info-card__hidden-info {
+  display: block;
+}
+
+.trainer-info-card a:hover > span,
+.trainer-info-card a:focus > span {
+  display: none;
+}
