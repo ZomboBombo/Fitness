@@ -1,0 +1,357 @@
+.advantages__title {
+  text-align: center;
+}
+
+.advantages__list {
+  @include markerless;
+
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 60px;
+
+  margin-top: 80px;
+}
+
+.advantages__list-item {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  /*
+  *** Модификаторы для управления расположением элементов внтури Grid Layout: НАЧАЛО ***
+  */
+  &--top-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    align-items: flex-start;
+  }
+
+  &--top-right {
+    grid-column-start: -1;
+    grid-column-end: -2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    align-items: flex-start;
+  }
+
+  &--center {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    align-items: center;
+  }
+
+  &--bottom-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: -1;
+    grid-row-end: -2;
+
+    align-items: flex-end;
+  }
+
+  &--bottom-right {
+    grid-column-start: -1;
+    grid-column-end: -2;
+    grid-row-start: -1;
+    grid-row-end: -2;
+
+    align-items: flex-end;
+  }
+  /* *** Модификаторы для управления расположением элементов внтури Grid Layout: КОНЕЦ *** */
+
+
+  &--top-left::after,
+  &--top-right::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: rgba(209, 10, 66, 0.2);
+  }
+}
+
+.advantages__colored-text {
+  position: relative;
+}
+
+.advantages__colored-text b {
+  font-family: $primary-font;
+  font-size: 71px;
+  font-weight: 700;
+  line-height: 106px;
+  color: transparent;
+
+  background-color: transparent;
+  background-image: linear-gradient(127.61deg, $advantages-colored-text-red 0%, $advantages-colored-text-blue 45.58%);
+  background-clip: text;
+}
+
+.advantages__colored-text span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $advantages-colored-text-blue--small;
+}
+
+.advantages__description {
+  width: 100%;
+  max-width: 228px;
+}
+
+.advantages__description strong {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  color: $advantages-description-text;
+}
+
+.advantages__description p {
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: $advantages-description-text;
+}
+
+.advantages__centered-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 240px;
+  min-height: 307px;
+
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  background-color: $advantages-centered-item-background;
+}
+
+.advantages__centered-item-heading p {
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 111px;
+  color: $white;
+}
+
+.advantages__centered-item-heading span {
+  margin: 0;
+  padding: 0;
+
+  font-family: $primary-font;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  color: $white;
+}
+
+.advantages__centered-item-description {
+  width: 100%;
+  max-width: 172px;
+
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $white;
+  text-align: center;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr minmax(240px, max-content) 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 50px;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .advantages__list-item {
+    width: 100%;
+    max-width: 360px;
+
+
+    &::after {
+      display: none;
+    }
+
+
+    /*
+    *** Модификаторы для управления расположением элементов внтури Grid Layout: НАЧАЛО ***
+    */
+    &--top-left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      align-items: flex-start;
+    }
+
+    &--top-right {
+      grid-column-start: -1;
+      grid-column-end: -2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      justify-self: end;
+
+      align-items: flex-start;
+    }
+
+    &--center {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      align-items: center;
+    }
+
+    &--bottom-left {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: -1;
+      grid-row-end: -2;
+
+      align-items: flex-end;
+    }
+
+    &--bottom-right {
+      grid-column-start: -1;
+      grid-column-end: -2;
+      grid-row-start: -1;
+      grid-row-end: -2;
+      justify-self: end;
+
+      align-items: flex-end;
+    }
+    /* *** Модификаторы для управления расположением элементов внтури Grid Layout: КОНЕЦ *** */
+  }
+
+
+  .advantages__colored-text b {
+    font-size: 58px;
+    line-height: 87px;
+  }
+
+  .advantages__description strong {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .advantages__centered-item {
+    justify-content: center;
+
+    width: 100%;
+    max-width: 442px;
+    min-height: 240px;
+
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .advantages__centered-item-heading {
+    margin-top: 0;
+  }
+
+  .advantages__centered-item-heading span {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .advantages__list {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantages__list-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .advantages__colored-text span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__description {
+    margin-top: 20px;
+  }
+
+  .advantages__description strong,
+  .advantages__description p {
+    text-align: center;
+  }
+
+  .advantages__centered-item {
+    max-width: 100%;
+  }
+}
