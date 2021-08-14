@@ -1,3 +1,8 @@
+.subscriptions {
+  position: relative;
+  z-index: 1;
+}
+
 .subscriptions__title {
   text-align: center;
 }
@@ -142,6 +147,13 @@
   display: block;
 }
 
+.subscriptions__decorative-image {
+  position: absolute;
+  bottom: -180px;
+  right: -60px;
+  z-index: -1;
+}
+
 
 /*
 ==================================
@@ -202,5 +214,9 @@
   .subscriptions__tab {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .subscriptions__decorative-image {
+    display: none;
   }
 }

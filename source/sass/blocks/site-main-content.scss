@@ -1,18 +1,8 @@
 .site-main-content__color-section {
-  position: relative;
-  z-index: 1;
-
   padding-top: 120px;
   padding-bottom: 120px;
 
   background-color: $section-background;
-}
-
-.site-main-content__color-section-image {
-  position: absolute;
-  bottom: -60px;
-  right: -60px;
-  z-index: -1;
 }
 
 
@@ -23,8 +13,18 @@
 */
 
 // *** ширина вьюпорта "Мобильный" ***
+@media (max-width: $width--desktop) {
+  .site-main-content__color-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+
+// *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
-  .site-main-content__color-section-image {
-    display: none;
+  .site-main-content__color-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
