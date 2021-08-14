@@ -1,0 +1,233 @@
+.discounts {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.discounts__title {
+  text-align: center;
+}
+
+.discounts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+
+  margin-top: 62px;
+}
+
+.discounts__main-offer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $promo-block-red;
+}
+
+.discounts__main-offer-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 45px;
+}
+
+.discounts__main-offer-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.discounts__main-offer-heading span,
+.discounts__main-offer-heading b {
+  font-family: $primary-font;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 44px;
+  color: $white;
+}
+
+.discounts__main-offer-heading b {
+  display: block;
+
+  font-size: 70px;
+  line-height: 109px;
+}
+
+.discounts__main-offer-text {
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: $white;
+}
+
+.discounts__main-offer-link {
+  margin-top: auto;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+
+  border-bottom: 1px solid $white;
+
+  $properties-for-transition: border, outline, opacity;
+
+  @include transition-settings($properties-for-transition, 0.05s);
+}
+
+.discounts__offers-list {
+  @include markerless;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.discounts__offers-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  min-height: 212px;
+
+  padding: 35px;
+
+  border: 7px solid transparent;
+  border-image-source: linear-gradient(148.82deg, $discounts-red 0.85%, $discounts-blue 100%);
+  border-image-slice: 1;
+}
+
+.discounts__offers-list p {
+  margin: 0;
+  padding: 0;
+}
+
+.discounts__offers-list b,
+.discounts__offers-list span {
+  font-family: $primary-font;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $discounts-text-blue;
+}
+
+.discounts__offers-list span {
+  display: block;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.discounts__offers-list a {
+  margin-top: auto;
+
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $discounts-text-blue;
+
+  border-bottom: 1px solid $discounts-text-blue;
+
+  $properties-for-transition: border, outline, opacity;
+
+  @include transition-settings($properties-for-transition, 0.05s);
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.discounts__main-offer-link:hover,
+.discounts__main-offer-link:focus {
+  border-bottom-color: transparent;
+  outline: 2px solid $white;
+  outline-offset: 6px;
+}
+
+.discounts__main-offer-link:active {
+  opacity: 0.7;
+}
+
+.discounts__offers-list a:hover,
+.discounts__offers-list a:focus {
+  border-bottom-color: transparent;
+  outline: 2px solid $discounts-text-blue;
+  outline-offset: 6px;
+}
+
+.discounts__offers-list a:active {
+  opacity: 0.7;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .discounts__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discounts__main-offer-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .discounts__offers-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(324px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    margin-top: 30px;
+  }
+}
+
+
+// *** ширина вьюпорта "Мобильный" ***
+@media (max-width: $width--tablet) {
+  .discounts__main-offer {
+    flex-direction: column;
+  }
+
+  .discounts__main-offer-description {
+    align-items: center;
+  }
+
+  .discounts__main-offer-heading {
+    text-align: center;
+  }
+
+  .discounts__offers-list {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discounts__offers-list li {
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
