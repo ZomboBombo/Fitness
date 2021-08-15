@@ -2,15 +2,26 @@
 
 /*
 ===================================================================================================================================
--------------------------------------------- Модуль настройки слайдера «Swiper»: НАЧАЛО -------------------------------------------
+----------------------------------- Модуль настройки слайдера «Swiper» в секции "Тренеры": НАЧАЛО ---------------------------------
 ===================================================================================================================================
 */
-window.swiperSettings = (() => {
+window.trainersSlider = (() => {
+  // ---------- КОНСТАНТЫ -----------
+  const SwiperSliderElement = {
+    CONTAINER: '.trainers .swiper-container',
+
+    toggle: {
+      PREVIOUS: '.trainers .swiper-button-prev',
+      NEXT: '.trainers .swiper-button-next',
+    }
+  };
+
+
   // --------- DOM-элементы ---------
-  const sliderTrack = document.querySelector('.trainers-slider__track');
-  const sliderTogglesBlock = sliderTrack.querySelector('.trainers-slider__toggles');
-  const sliderList = sliderTrack.querySelector('.trainers-slider__list');
-  const swiperSlides = sliderTrack.querySelectorAll('.swiper-wrapper > li');
+  const trainersSliderTrack = document.querySelector('.slider__track');
+  const trainersTogglesBlock = trainersSliderTrack.querySelector('.slider__toggles');
+  const trainersList = trainersSliderTrack.querySelector('.trainers__list');
+  const swiperSlides = trainersList.querySelectorAll('li');
 
 
   /*
@@ -18,8 +29,9 @@ window.swiperSettings = (() => {
   */
 
   // *** Установка модификаторов классов для активизации JS-стилей ***
-  sliderTogglesBlock.classList.add('trainers-slider__toggles--js-active');
-  sliderList.classList.add('trainers-slider__list--js-active');
+  trainersTogglesBlock.classList.add('slider__toggles--js-active');
+  trainersList.classList.add('trainers__list--js-active');
+
 
   /*
   *** Установка элементам списка Карточек тренеров
@@ -31,7 +43,7 @@ window.swiperSettings = (() => {
 
 
   // *** Инициализация слайдера «Swiper» ***
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper(SwiperSliderElement.CONTAINER, {
     slidesPerView: 1,
     slidesPerGroup: 1,
 
@@ -39,8 +51,8 @@ window.swiperSettings = (() => {
     preventClicks: false,
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: SwiperSliderElement.toggle.NEXT,
+      prevEl: SwiperSliderElement.toggle.PREVIOUS,
     },
 
     breakpoints: {
@@ -65,5 +77,5 @@ window.swiperSettings = (() => {
   });
 })();
 /*
-*** ---------------------------------------- Модуль настройки слайдера «Swiper»: КОНЕЦ --------------------------------------------
+*** ---------------------------------- Модуль настройки слайдера «Swiper» в секции "Тренеры": КОНЕЦ -------------------------------
 */
