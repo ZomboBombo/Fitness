@@ -1,5 +1,42 @@
 .site-footer {
+  background-color: $footer-background;
+}
 
-  // Tempo
-  outline: 2px solid blue;
+.site-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .site-footer__logo {
+    margin-right: 42px;
+  }
+}
+
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--tablet) {
+  .site-footer__wrapper {
+    flex-direction: column;
+  }
+
+  .site-footer__logo {
+    position: absolute;
+  }
+
+  .site-footer__logo img {
+    width: 68px;
+    height: 15px;
+  }
 }
