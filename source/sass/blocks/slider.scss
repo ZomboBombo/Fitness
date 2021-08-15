@@ -1,0 +1,88 @@
+.slider__track {
+  position: relative;
+  margin-top: 62px;
+}
+
+.slider__toggles {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+
+  &--js-active {
+    display: block;
+  }
+}
+
+.slider__toggles-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.slider__toggle-button {
+  position: absolute;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+
+  // --- Мини-настройка для переопределения дефолтных стилей «Swiper»: НАЧАЛО ---
+  &::before,
+  &::after {
+    font-size: 0;
+  }
+  // --- Мини-настройка для переопределения дефолтных стилей «Swiper»: КОНЕЦ ---
+
+  &--previous {
+    left: -40px;
+    background-image: linear-gradient(to right, rgba($white, 0.5) 0%, transparent 100%);
+  }
+
+  &--next {
+    right: -40px;
+    background-image: linear-gradient(to left, rgba($white, 0.5) 0%, transparent 100%);
+  }
+}
+
+.slider__toggle-button-icon {
+  fill: transparent;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .slider__track {
+    margin-top: 50px;
+  }
+
+  .slider__toggle-button {
+    &--previous {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}
