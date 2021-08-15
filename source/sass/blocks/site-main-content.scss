@@ -5,6 +5,39 @@
   background-color: $section-background;
 }
 
+.site-main-content__contacts-box {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 120px;
+}
+
+.site-main-content__contacts-column {
+  flex-grow: 1;
+
+  display: flex;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  padding-right: 120px;
+  padding-bottom: 70px;
+  padding-left: 120px;
+
+  border-top: 1px solid $contacts-border;
+
+
+  &--form {
+    justify-content: flex-end;
+  }
+
+  &--contacts {
+    justify-content: flex-start;
+  }
+}
+
 
 /*
 ==================================
@@ -12,11 +45,23 @@
 ==================================
 */
 
-// *** ширина вьюпорта "Мобильный" ***
+// *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .site-main-content__color-section {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+
+  .site-main-content__contacts-box {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .site-main-content__contacts-column {
+    &--form,
+    &--contacts {
+      justify-content: center;
+    }
   }
 }
 
@@ -26,5 +71,14 @@
   .site-main-content__color-section {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  .site-main-content__contacts-box {
+    margin-top: 70px;
+  }
+
+  .site-main-content__contacts-column {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

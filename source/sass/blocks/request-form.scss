@@ -1,0 +1,108 @@
+.request-form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-top: 58px;
+  padding: 0;
+
+  border: none;
+}
+
+.request-form input {
+  display: block;
+
+  width: 100%;
+  max-width: 190px;
+
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $white;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $contacts-border;
+
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.request-form button[type="submit"] {
+  width: 100%;
+  min-height: 52px;
+
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+
+/*
+*** Стили для интерактивности ***
+*/
+.request-form input:hover,
+.request-form input:focus {
+  border-bottom-color: $white;
+}
+
+.request-form input:active {
+  opacity: 0.7;
+}
+
+.request-form button[type="submit"]:hover,
+.request-form button[type="submit"]:focus {
+  color: $contacts-form-background;
+  background-color: $white;
+}
+
+.request-form button[type="submit"]:active {
+  opacity: 0.7;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Мобильный" ***
+@media (max-width: $width--tablet) {
+  .request-form fieldset {
+    flex-direction: column;
+  }
+
+  .request-form input {
+    max-width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 40px;
+
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .request-form button[type="submit"] {
+    margin-top: 40px;
+  }
+}

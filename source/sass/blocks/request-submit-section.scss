@@ -1,0 +1,26 @@
+.request-submit-section {
+  background-color: $contacts-form-background;
+}
+
+.request-submit-section__content {
+  width: 100%;
+  max-width: 410px;
+}
+
+.request-submit-section__title {
+  color: $white;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Планшет" ***
+@media (max-width: $width--desktop) {
+  .request-submit-section__content {
+    max-width: 472px;
+  }
+}
