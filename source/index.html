@@ -365,29 +365,29 @@
         </section>
       </div>
 
-      <section class="container trainers-slider">
-        <h2 class="section-title trainers-slider__title">Тренеры</h2>
+      <section class="container slider trainers">
+        <h2 class="section-title trainers__title">Тренеры</h2>
 
-        <div class="trainers-slider__track">
-          <div class="trainers-slider__toggles">
-            <div class="trainers-slider__toggles-wrapper">
-              <button type="button" class="swiper-button-prev trainers-slider__toggle-button trainers-slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
+        <div class="slider__track">
+          <div class="slider__toggles">
+            <div class="slider__toggles-wrapper">
+              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
                 Предыдущий
-                <svg width="16" height="32" class="trainers-slider__toggle-button-icon">
+                <svg width="16" height="32" class="slider__toggle-button-icon">
                   <use xlink:href="#icon-slider-toggle"></use>
                 </svg>
               </button>
-              <button type="button" class="swiper-button-next trainers-slider__toggle-button trainers-slider__toggle-button--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
+              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
                 Следующий
-                <svg width="16" height="32" class="trainers-slider__toggle-button-icon trainers-slider__toggle-button-icon--next">
+                <svg width="16" height="32" class="slider__toggle-button-icon slider__toggle-button-icon--next">
                   <use xlink:href="#icon-slider-toggle"></use>
                 </svg>
               </button>
             </div>
           </div>
 
-          <div class="swiper-container trainers-slider__slides-container">
-            <ul class="swiper-wrapper trainers-slider__list">
+          <div class="swiper-container trainers__slides-container">
+            <ul class="swiper-wrapper trainers__list">
               <li>
                 <article class="trainer-info-card">
                   <a href="#" title="Перейти на страницу с подробным описанием тренера..." aria-label="Перейти на страницу с подробным описанием тренера...">
@@ -713,6 +713,81 @@
               <a href="#" title="Перейти на страницу с подробной информацией об акции" aria-label="Перейти на страницу с подробной информацией об акции">Подробнее</a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="container slider reviews">
+        <h2 class="section-title reviews__title">Отзывы</h2>
+
+        <div class="slider__track reviews__slider-track">
+          <div class="slider__toggles">
+            <div class="slider__toggles-wrapper">
+              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
+                Предыдущий
+                <svg width="16" height="32" class="slider__toggle-button-icon">
+                  <use xlink:href="#icon-slider-toggle"></use>
+                </svg>
+              </button>
+              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
+                Следующий
+                <svg width="16" height="32" class="slider__toggle-button-icon slider__toggle-button-icon--next">
+                  <use xlink:href="#icon-slider-toggle"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="swiper-container reviews__slides-container">
+            <ul class="swiper-wrapper reviews__list">
+              <li>
+                <article class="review-card">
+                  <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
+
+                  <picture>
+                    <img src="img/review-avatar-anna-orlova.png" width="80" height="80" alt="Аватар автора отзыва">
+                  </picture>
+
+                  <div class="review-card__body">
+                    <span>Анна Орлова</span>
+
+                    <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="review-card">
+                  <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
+
+                  <picture>
+                    <img src="img/avatar-stub.jpg" width="80" height="80" alt="Аватар автора отзыва">
+                  </picture>
+
+                  <div class="review-card__body">
+                    <span>Георгий Георгиевич</span>
+
+                    <p>«В сие заведение начал ходить совсем недавно, но уже успел влюбиться!!! Много разного высококлассного оборудования, современные тренажёры, отзывчивый персонал!!! Ставлю вашему фитнес-центру 10/10!!! Обязательно повосетую всем своим друзьям!!!»</p>
+                  </div>
+                </article>
+              </li>
+
+              <li>
+                <article class="review-card">
+                  <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
+
+                  <picture>
+                    <img src="img/avatar-stub.jpg" width="80" height="80" alt="Аватар автора отзыва">
+                  </picture>
+
+                  <div class="review-card__body">
+                    <span>Аноним 404</span>
+
+                    <p>«плохой спортзал ни ходити сюда никогда ни саветую никому всегда много народу тренеры нечего не могут обьеснить нормально стоек для присида мало ужасное место»</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
