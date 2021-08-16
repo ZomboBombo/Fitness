@@ -57,12 +57,18 @@
             </ul>
           </div>
 
-          <a href="#" class="button main-block__purchase-button" title="Перейти к секции «Абонементы»" aria-label="Перейти к секции «Абонементы»">Купить абонемент</a>
+          <a href="#subscriptions-section" class="button main-block__purchase-button" title="Перейти к секции «Абонементы»" aria-label="Перейти к секции «Абонементы»">Купить абонемент</a>
         </div>
 
         <div class="main-block__column main-block__column--second">
           <picture>
-            <img src="img/fitness-man.jpg" width="500" height="556" alt="Картинка с изображением Фитнесмена">
+            <source type="image/webp" srcset="img/fitness-man.webp, img/fitness-man@2x.webp 2x">
+
+            <!--
+              *** 1x: w-500px, h-556px
+              *** 2x: w-1000px, h-1112px
+            -->
+            <img src="img/fitness-man.jpg" srcset="img/fitness-man@wx.jpg 2x" width="500" height="556" alt="Картинка с изображением Фитнесмена">
           </picture>
 
           <ul class="main-block__list main-block__socials">
@@ -97,12 +103,28 @@
 
         <div class="gym-section__column gym-section__column--second">
           <picture>
+            <source type="image/webp" media="(max-width: 450px)" srcset="img/gym--mobile.webp, img/gym--mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym--tablet.webp, img/gym--tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/gym--desktop.webp, img/gym--desktop@2x.webp 2x">
+
+            <!--
+              *** Десктоп: w-660px, h-401px
+              *** Планшет: w-678px, h-345px
+              *** Мобильный: w-320px, h-313px
+            -->
             <img src="img/gym--desktop.jpg" srcset="img/gym--desktop.jpg 660w, img/gym--tablet.jpg 678w, img/gym--mobile.jpg 320w" sizes="(max-width: 450px) 320px, (max-width: 1199px) 678px, 660px" width="660" height="401" class="gym-section__main-image" alt="Фотография тренажёрного зала">
           </picture>
 
           <div class="gym-section__fake-video-container fake-video-container">
             <div class="fake-video-container__inner-wrapper">
               <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/video-preview-gym--mobile.webp, img/video-preview-gym--mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/video-preview-gym.webp, img/video-preview-gym@2x.webp 2x">
+
+                <!--
+                  *** Десктоп: w-364px, h-222px
+                  *** Мобильный: w-320px, h-167px
+                -->
                 <img src="img/video-preview-gym.jpg" srcset="img/video-preview-gym.jpg 354w, img/video-preview-gym--mobile.jpg 320w" sizes="(max-width: 767px) 320px, 354px" width="364" height="228" class="fake-video-container__preview-image" alt="Превью для видео о тренажёрном зале">
               </picture>
 
@@ -119,8 +141,8 @@
         </div>
       </section>
 
-      <div class="site-main-content__color-section">
-        <section class="subscriptions" id="subscriptions-section">
+      <div class="site-main-content__color-section site-main-content__color-section--subscriptions" id="subscriptions-section">
+        <section class="subscriptions">
           <div class="container subscriptions__wrapper">
             <h2 class="section-title subscriptions__title">Абонементы</h2>
 
@@ -326,7 +348,13 @@
           </div>
 
           <picture>
-            <img src="img/weight-plates.png" width="307" height="299" class="subscriptions__decorative-image" alt="Спортивные блины фирмы «Rogue»">
+            <source type="image/webp" srcset="img/weight-plates.webp, img/weight-plates@2x.webp 2x">
+
+            <!--
+              *** 1x: w-307px, h-299px
+              *** 2x: w-613px, h-596px
+            -->
+            <img src="img/weight-plates.png" srcset="img/weight-plates@2x.png 2x" width="307" height="299" class="subscriptions__decorative-image" alt="Спортивные блины фирмы «Rogue»">
           </picture>
         </section>
       </div>
@@ -362,6 +390,13 @@
 
           <div class="promo-block__column">
             <picture>
+              <source type="image/webp" media="(max-width: 400px)" srcset="img/super-games--mobile.webp, img/super-games--mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/super-games.webp, img/super-games@2x.webp 2x">
+
+              <!--
+                *** Десктоп: w-660px, h-500px
+                *** Мобильный: w-290px, h-292px
+              -->
               <img src="img/super-games.jpg" srcset="img/super-games.jpg 660w, img/super-games--mobile.jpg 290w" sizes="(max-width: 400px) 290px, 660px" width="660" height="500" class="promo-block__image" alt="Атлет, участвующий в «Super Games»">
             </picture>
           </div>
@@ -371,7 +406,7 @@
       <section class="container slider trainers">
         <h2 class="section-title trainers__title">Тренеры</h2>
 
-        <div class="slider__track">
+        <div class="slider__track trainers__slider-track">
           <div class="slider__toggles">
             <div class="slider__toggles-wrapper">
               <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
@@ -397,7 +432,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/anna-pavlova.jpg" width="260" height="294" alt="Персональный тренер Анна Павлова">
+                      <source type="image/webp" srcset="img/anna-pavlova.webp, img/anna-pavlova@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/anna-pavlova.jpg" srcset="img/anna-pavlova@2x.jpg 2x" width="260" height="294" alt="Персональный тренер Анна Павлова">
                     </picture>
 
                     <span>Анна Павлова</span>
@@ -424,7 +465,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/alexey-lavrov.jpg" width="260" height="294" alt="Персональный тренер Алексей Лавров">
+                      <source type="image/webp" srcset="img/alexey-lavrov.webp, img/alexey-lavrov@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/alexey-lavrov.jpg" srcset="img/alexey-lavrov@2x.jpg 2x" width="260" height="294" alt="Персональный тренер Алексей Лавров">
                     </picture>
 
                     <span>Алексей Лавров</span>
@@ -451,7 +498,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/alexandr-pashkov.jpg" width="260" height="294" alt="Персональный тренер Александр Пашков">
+                      <source type="image/webp" srcset="img/alexandr-pashkov.webp, img/alexandr-pashkov@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/alexandr-pashkov.jpg" srcset="img/alexandr-pashkov@2x.jpg 2x" width="260" height="294" alt="Персональный тренер Александр Пашков">
                     </picture>
 
                     <span>Александр Пашков</span>
@@ -478,7 +531,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/maria-ketova.jpg" width="260" height="294" alt="Персональный тренер Мария Кетова">
+                      <source type="image/webp" srcset="img/maria-ketova.webp, img/maria-ketova@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/maria-ketova.jpg" srcset="img/maria-ketova@2x.jpg 2x" width="260" height="294" alt="Персональный тренер Мария Кетова">
                     </picture>
 
                     <span>Мария Кетова</span>
@@ -505,7 +564,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/angelika-nikolaeva.png" width="260" height="294" alt="Персональный тренер Анжелика Николаева">
+                      <source type="image/webp" srcset="img/angelika-nikolaeva.webp, img/angelika-nikolaeva@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/angelika-nikolaeva.png" srcset="img/angelika-nikolaeva@2x.png 2x" width="260" height="294" alt="Персональный тренер Анжелика Николаева">
                     </picture>
 
                     <span>Анжелика Николаева</span>
@@ -532,7 +597,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/eduard-kim.png" width="260" height="294" alt="Персональный тренер Эдуард Ким">
+                      <source type="image/webp" srcset="img/eduard-kim.webp, img/eduard-kim@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/eduard-kim.png" srcset="img/eduard-kim@2x.png 2x" width="260" height="294" alt="Персональный тренер Эдуард Ким">
                     </picture>
 
                     <span>Эдуард Ким</span>
@@ -559,7 +630,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/grigoriy-afanasiev.png" width="260" height="294" alt="Персональный тренер Григорий Афанасьев">
+                      <source type="image/webp" srcset="img/grigoriy-afanasiev.webp, img/grigoriy-afanasiev@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/grigoriy-afanasiev.png" srcset="img/grigoriy-afanasiev@2x.png 2x" width="260" height="294" alt="Персональный тренер Григорий Афанасьев">
                     </picture>
 
                     <span>Григорий Афанасьев</span>
@@ -586,7 +663,13 @@
                     <h3 class="visually-hidden">Информационная карточка тренера</h3>
 
                     <picture>
-                      <img src="img/viktoria-vasileva.png" width="260" height="294" alt="Персональный тренер Виктория Васильева">
+                      <source type="image/webp" srcset="img/viktoria-vasileva.webp, img/viktoria-vasileva@2x.webp 2x">
+
+                      <!--
+                        *** 1x: w-260px, h-294px
+                        *** 2x: w-520px, h-588px
+                      -->
+                      <img src="img/viktoria-vasileva.png" srcset="img/viktoria-vasileva@2x.png 2x" width="260" height="294" alt="Персональный тренер Виктория Васильева">
                     </picture>
 
                     <span>Виктория Васильева</span>
@@ -611,7 +694,7 @@
         </div>
       </section>
 
-      <div class="site-main-content__color-section">
+      <div class="site-main-content__color-section site-main-content__color-section--advantages">
         <section class="container container--advantages advantages">
           <h2 class="section-title advantages__title">Наши преимущества</h2>
 
@@ -687,12 +770,21 @@
                 <b>4999</b>
               </p>
 
-              <p class="discounts__main-offer-text">Безлимитный абонемент в тренажерный зал</p>
+              <p class="discounts__main-offer-text">Безлимитный абонемент в&nbsp;тренажерный зал</p>
 
               <a href="#" class="discounts__main-offer-link" title="Перейти на страницу с подробной информацией об акции" aria-label="Перейти на страницу с подробной информацией об акции">Подробнее</a>
             </div>
 
             <picture>
+              <source type="image/webp" media="(max-width: 460px)" srcset="img/fitness-girl--mobile.webp, img/fitness-girl--mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/fitness-girl--tablet.webp, img/fitness-girl--tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/fitness-girl--desktop.webp, img/fitness-girl--desktop@2x.webp 2x">
+
+              <!--
+                *** Десктоп: w-280px, h-462px
+                *** Планшет: w-399px, h-462px
+                *** Мобильный: w-290px, h-299px
+              -->
               <img src="img/fitness-girl--desktop.jpg" srcset="img/fitness-girl--desktop.jpg 280w, img/fitness-girl--tablet.jpg 399w, img/fitness-girl--mobile.jpg 290w" sizes="(max-width: 460px) 290px, (max-width: 1199px) 399px, 280px" class="discounts__main-offer-image" width="280" height="462" alt="Фотография спортивной девушки, которая приобрела БЕЗЛИМИТНЫЙ ГОДОВОЙ АБОНЕМЕНТ в «SuperGym»">
             </picture>
           </div>
@@ -725,13 +817,13 @@
         <div class="slider__track reviews__slider-track">
           <div class="slider__toggles">
             <div class="slider__toggles-wrapper">
-              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
+              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous reviews__slider-toggle reviews__slider-toggle--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
                 Предыдущий
                 <svg width="16" height="32" class="slider__toggle-button-icon">
                   <use xlink:href="#icon-slider-toggle"></use>
                 </svg>
               </button>
-              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
+              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next reviews__slider-toggle reviews__slider-toggle--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
                 Следующий
                 <svg width="16" height="32" class="slider__toggle-button-icon slider__toggle-button-icon--next">
                   <use xlink:href="#icon-slider-toggle"></use>
@@ -747,7 +839,13 @@
                   <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
 
                   <picture>
-                    <img src="img/review-avatar-anna-orlova.png" width="80" height="80" alt="Аватар автора отзыва">
+                    <source type="image/webp" srcset="img/review-avatar-anna-orlova.webp, img/review-avatar-anna-orlova@2x.webp 2x">
+
+                    <!--
+                      *** 1x: w-80px, h-80px
+                      *** 2x: w-160px, h-160px
+                    -->
+                    <img src="img/review-avatar-anna-orlova.png" srcset="img/review-avatar-anna-orlova@2x.png 2x" width="80" height="80" alt="Аватар автора отзыва">
                   </picture>
 
                   <div class="review-card__body">
@@ -763,13 +861,19 @@
                   <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
 
                   <picture>
-                    <img src="img/avatar-stub.jpg" width="80" height="80" alt="Аватар автора отзыва">
+                    <source type="image/webp" srcset="img/avatar-stub.webp, img/avatar-stub@2x.webp 2x">
+
+                    <!--
+                      *** 1x: w-80px, h-80px
+                      *** 2x: w-160px, h-160px
+                    -->
+                    <img src="img/avatar-stub.jpg" srcset="img/avatar-stub@2x.png 2x" width="80" height="80" alt="Аватар автора отзыва">
                   </picture>
 
                   <div class="review-card__body">
-                    <span>Георгий Георгиевич</span>
+                    <span>Борис Борис</span>
 
-                    <p>«В сие заведение начал ходить совсем недавно, но уже успел влюбиться!!! Много разного высококлассного оборудования, современные тренажёры, отзывчивый персонал!!! Ставлю вашему фитнес-центру 10/10!!! Обязательно повосетую всем своим друзьям!!!»</p>
+                    <!-- <p>«В сие заведение начал ходить совсем недавно, но уже успел влюбиться!!! Много разного высококлассного оборудования, современные тренажёры, отзывчивый персонал!!! Ставлю вашему фитнес-центру 10/10!!! Обязательно повосетую всем своим друзьям!!!»</p> -->
                   </div>
                 </article>
               </li>
@@ -779,7 +883,13 @@
                   <h3 class="visually-hidden">Отзыв о фитнес-центре</h3>
 
                   <picture>
-                    <img src="img/avatar-stub.jpg" width="80" height="80" alt="Аватар автора отзыва">
+                    <source type="image/webp" srcset="img/avatar-stub.webp, img/avatar-stub@2x.webp 2x">
+
+                    <!--
+                      *** 1x: w-80px, h-80px
+                      *** 2x: w-160px, h-160px
+                    -->
+                    <img src="img/avatar-stub.jpg" srcset="img/avatar-stub@2x.png 2x" width="80" height="80" alt="Аватар автора отзыва">
                   </picture>
 
                   <div class="review-card__body">
@@ -806,7 +916,7 @@
                 <legend class="visually-hidden">Контактная информация</legend>
 
                 <input type="text" placeholder="Имя" required="">
-                <input type="phone" placeholder="Телефон" required="">
+                <input type="tel" placeholder="Телефон" required="">
               </fieldset>
 
               <button type="submit" class="button" title="Отправить заявку" aria-label="Отправить заявку">Отправить</button>
@@ -833,11 +943,15 @@
               <ul class="contacts__list contacts__list--contact-info">
                 <li>
                   <b>Телефон:</b>
-                  <p>8-800-555-55-55</p>
+                  <p>
+                    <a href="tel:88005555555">8-800-555-55-55</a>
+                  </p>
                 </li>
                 <li>
                   <b>Email:</b>
-                  <p>omsk@supergym.ru</p>
+                  <p>
+                    <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                  </p>
                 </li>
               </ul>
             </div>
