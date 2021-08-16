@@ -1,6 +1,6 @@
 .slider__track {
   position: relative;
-  margin-top: 62px;
+  margin-top: 52px;
 }
 
 .slider__toggles {
@@ -45,12 +45,12 @@
   // --- Мини-настройка для переопределения дефолтных стилей «Swiper»: КОНЕЦ ---
 
   &--previous {
-    left: -40px;
+    left: -52px;
     background-image: linear-gradient(to right, rgba($white, 0.5) 0%, transparent 100%);
   }
 
   &--next {
-    right: -40px;
+    right: -54px;
     background-image: linear-gradient(to left, rgba($white, 0.5) 0%, transparent 100%);
   }
 }
@@ -73,16 +73,16 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .slider__track {
-    margin-top: 50px;
+    margin-top: 42px;
   }
 
   .slider__toggle-button {
     &--previous {
-      left: 0;
+      left: -7px;
     }
 
     &--next {
-      right: 0;
+      right: -7px;
     }
   }
 }

@@ -4,10 +4,13 @@
 
 .site-footer__wrapper {
   display: flex;
-  justify-content: space-between;
 
-  padding-top: 44px;
+  padding-top: 45px;
   padding-bottom: 44px;
+}
+
+.site-footer__logo {
+  margin-left: 10px;
 }
 
 
@@ -20,19 +23,23 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .site-footer__logo {
+    margin-left: 0;
     margin-right: 42px;
   }
 }
 
 
-// *** ширина вьюпорта "Планшет" ***
+// *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
   .site-footer__wrapper {
+    position: relative;
     flex-direction: column;
   }
 
   .site-footer__logo {
     position: absolute;
+    top: 50px;
+    left: 14px;
   }
 
   .site-footer__logo img {

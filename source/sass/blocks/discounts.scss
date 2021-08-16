@@ -1,5 +1,5 @@
 .discounts {
-  margin-top: 120px;
+  margin-top: 118px;
 }
 
 .discounts__title {
@@ -11,7 +11,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
 
-  margin-top: 62px;
+  margin-top: 52px;
+  margin-left: 11px;
+
+  max-width: 1160px;
 }
 
 .discounts__main-offer {
@@ -38,7 +41,7 @@
   font-family: $primary-font;
   font-size: 28px;
   font-weight: 700;
-  line-height: 44px;
+  line-height: 20px;
   color: $white;
 }
 
@@ -46,10 +49,14 @@
   display: block;
 
   font-size: 70px;
-  line-height: 109px;
+  line-height: 68px;
 }
 
 .discounts__main-offer-text {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+
   font-family: $primary-font;
   font-size: 18px;
   font-weight: 400;
@@ -92,7 +99,10 @@
   width: 100%;
   min-height: 212px;
 
-  padding: 35px;
+  padding-right: 29px;
+  padding-top: 22px;
+  padding-left: 29px;
+  padding-bottom: 30px;
 
   border: 7px solid transparent;
   border-image-source: linear-gradient(148.82deg, $discounts-red 0.85%, $discounts-blue 100%);
@@ -115,6 +125,8 @@
 
 .discounts__offers-list span {
   display: block;
+
+  margin-top: 6px;
 
   font-size: 16px;
   font-weight: 400;
@@ -175,9 +187,20 @@
 
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
+  .discounts {
+    margin-top: 99px;
+  }
+
   .discounts__wrapper {
     display: flex;
     flex-direction: column;
+
+    margin-top: 41px;
+    margin-left: 0;
+  }
+
+  .discounts__main-offer-description {
+    max-width: 279px;
   }
 
   .discounts__main-offer-image {
@@ -199,16 +222,39 @@
 
 // *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
+  .discounts {
+    margin-top: 70px;
+  }
+
   .discounts__main-offer {
     flex-direction: column;
   }
 
   .discounts__main-offer-description {
     align-items: center;
+
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .discounts__main-offer-heading {
+    padding-left: 10px;
     text-align: center;
+  }
+
+  .discounts__main-offer-text {
+    width: auto;
+
+    margin-top: 15px;
+    margin-left: 12px;
+
+    text-align: center;
+  }
+
+  .discounts__main-offer-link {
+    margin-top: 31px;
+    margin-left: 11px;
   }
 
   .discounts__offers-list {
@@ -223,6 +269,9 @@
     align-items: center;
     margin-bottom: 30px;
     text-align: center;
+
+    padding-top: 33px;
+    padding-bottom: 39px;
 
 
     &:last-child {

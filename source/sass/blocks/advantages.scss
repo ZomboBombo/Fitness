@@ -6,18 +6,17 @@
   @include markerless;
 
   display: grid;
-  grid-template-columns: 1fr 240px 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 60px;
+  grid-template-columns: 1fr 255px 1fr;
+  grid-template-rows: repeat(2, 155px);
+  grid-column-gap: 53px;
 
-  margin-top: 80px;
+  margin-top: 70px;
 }
 
 .advantages__list-item {
   position: relative;
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
 
@@ -31,6 +30,8 @@
     grid-row-end: 2;
 
     align-items: flex-start;
+
+    padding-left: 99px;
   }
 
   &--top-right {
@@ -40,6 +41,8 @@
     grid-row-end: 2;
 
     align-items: flex-start;
+
+    padding-right: 92px;
   }
 
   &--center {
@@ -47,8 +50,6 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: -1;
-
-    align-items: center;
   }
 
   &--bottom-left {
@@ -58,6 +59,8 @@
     grid-row-end: -2;
 
     align-items: flex-end;
+
+    padding-left: 92px;
   }
 
   &--bottom-right {
@@ -67,6 +70,8 @@
     grid-row-end: -2;
 
     align-items: flex-end;
+
+    padding-right: 92px;
   }
   /* *** Модификаторы для управления расположением элементов внтури Grid Layout: КОНЕЦ *** */
 
@@ -76,27 +81,37 @@
     content: "";
 
     position: absolute;
-    left: 0;
     bottom: 0;
 
     display: block;
 
     width: 100%;
+    max-width: 340px;
     height: 2px;
 
     background-color: rgba(209, 10, 66, 0.2);
+  }
+
+  &--top-left::after {
+    right: 0;
+  }
+
+  &--top-right::after {
+    left: 0;
   }
 }
 
 .advantages__colored-text {
   position: relative;
+  margin-right: 26px;
+  margin-bottom: 18px;
 }
 
 .advantages__colored-text b {
   font-family: $primary-font;
   font-size: 71px;
   font-weight: 700;
-  line-height: 106px;
+  line-height: 50px;
   color: transparent;
 
   background-color: transparent;
@@ -106,7 +121,7 @@
 
 .advantages__colored-text span {
   position: absolute;
-  bottom: 0;
+  bottom: -21px;
   left: 0;
 
   font-family: $primary-font;
@@ -117,8 +132,7 @@
 }
 
 .advantages__description {
-  width: 100%;
-  max-width: 228px;
+  width: auto;
 }
 
 .advantages__description strong {
@@ -130,12 +144,13 @@
   font-family: $primary-font;
   font-size: 22px;
   font-weight: 700;
-  line-height: 33px;
+  line-height: 22px;
   color: $advantages-description-text;
 }
 
 .advantages__description p {
   margin: 0;
+  margin-top: 10px;
   padding: 0;
 
   font-family: $primary-font;
@@ -148,14 +163,14 @@
 .advantages__centered-item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 
   width: 100%;
   max-width: 240px;
   min-height: 307px;
 
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 56px;
 
   background-color: $advantages-centered-item-background;
 }
@@ -163,11 +178,12 @@
 .advantages__centered-item-heading p {
   margin: 0;
   padding: 0;
+  padding-left: 8px;
 
   font-family: $primary-font;
   font-size: 74px;
   font-weight: 700;
-  line-height: 111px;
+  line-height: 74px;
   color: $white;
 }
 
@@ -183,6 +199,10 @@
 }
 
 .advantages__centered-item-description {
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+
   width: 100%;
   max-width: 172px;
 
@@ -205,21 +225,25 @@
 @media (max-width: $width--desktop) {
   .advantages__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr minmax(240px, max-content) 1fr;
+    grid-template-rows: min-content minmax(240px, max-content) min-content;
     grid-column-gap: 0;
-    grid-row-gap: 50px;
+    grid-row-gap: 28px;
 
     width: 100%;
     max-width: 800px;
 
-    margin-top: 60px;
+    margin-top: 28px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .advantages__list-item {
+    align-items: flex-start;
+
     width: 100%;
     max-width: 360px;
+
+    padding: 0;
 
 
     &::after {
@@ -235,8 +259,6 @@
       grid-column-end: 2;
       grid-row-start: 1;
       grid-row-end: 2;
-
-      align-items: flex-start;
     }
 
     &--top-right {
@@ -244,9 +266,8 @@
       grid-column-end: -2;
       grid-row-start: 1;
       grid-row-end: 2;
-      justify-self: end;
 
-      align-items: flex-start;
+      padding-left: 15px;
     }
 
     &--center {
@@ -263,8 +284,6 @@
       grid-column-end: 2;
       grid-row-start: -1;
       grid-row-end: -2;
-
-      align-items: flex-end;
     }
 
     &--bottom-right {
@@ -272,17 +291,27 @@
       grid-column-end: -2;
       grid-row-start: -1;
       grid-row-end: -2;
-      justify-self: end;
 
-      align-items: flex-end;
+      padding-left: 15px;
     }
     /* *** Модификаторы для управления расположением элементов внтури Grid Layout: КОНЕЦ *** */
   }
 
+  .advantages__colored-text {
+    margin-right: 30px;
+  }
 
   .advantages__colored-text b {
     font-size: 58px;
     line-height: 87px;
+  }
+
+  .advantages__colored-text span {
+    bottom: -3px;
+  }
+
+  .advantages__description {
+    margin-top: 14px;
   }
 
   .advantages__description strong {
@@ -290,30 +319,40 @@
     line-height: 30px;
   }
 
-  .advantages__centered-item {
-    justify-content: center;
+  .advantages__description p {
+    margin-top: 2px;
+  }
 
+  .advantages__centered-item {
     width: 100%;
     max-width: 442px;
     min-height: 240px;
 
     margin: 0 auto;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 34px;
+    padding-bottom: 20px;
   }
 
   .advantages__centered-item-heading {
     margin-top: 0;
   }
 
+  .advantages__centered-item-heading p {
+    padding-left: 0;
+  }
+
   .advantages__centered-item-heading span {
     font-size: 22px;
     line-height: 33px;
   }
+
+  .advantages__centered-item-description {
+    margin-top: 13px;
+  }
 }
 
 
-// *** ширина вьюпорта "Планшет" ***
+// *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
   .advantages__list {
     grid-column-gap: 0;
@@ -329,12 +368,46 @@
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 22px;
 
 
     &:last-child {
       margin-bottom: 0;
     }
+
+    /*
+    *** Модификаторы для управления расположением элементов внтури Grid Layout: НАЧАЛО ***
+    */
+    &--top-left {
+      order: 1;
+    }
+
+    &--top-right {
+      order: 2;
+
+      margin-bottom: 42px;
+      padding-left: 0;
+    }
+
+    &--center {
+      order: 3;
+      justify-content: flex-start;
+      margin-bottom: 26px;
+    }
+
+    &--bottom-left {
+      order: 4;
+    }
+
+    &--bottom-right {
+      order: 5;
+      padding-left: 0;
+    }
+    /* *** Модификаторы для управления расположением элементов внтури Grid Layout: КОНЕЦ *** */
+  }
+
+  .advantages__colored-text {
+    margin: 0;
   }
 
   .advantages__colored-text span {
@@ -343,7 +416,10 @@
   }
 
   .advantages__description {
-    margin-top: 20px;
+    width: 100%;
+    max-width: 226px;
+
+    margin-top: 8px;
   }
 
   .advantages__description strong,
@@ -353,5 +429,14 @@
 
   .advantages__centered-item {
     max-width: 100%;
+    padding-top: 38px;
+  }
+
+  .advantages__centered-item-heading span {
+    line-height: 22px;
+  }
+
+  .advantages__centered-item-description {
+    margin-top: 9px;
   }
 }

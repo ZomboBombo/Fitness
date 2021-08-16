@@ -15,7 +15,11 @@
   justify-content: space-between;
   align-items: center;
 
-  min-height: 52px;
+  min-height: 40px;
+
+  padding-top: 26px;
+  padding-right: 31px;
+  padding-left: 10px;
 }
 
 .site-header__contacts {
@@ -104,6 +108,15 @@
 
   .site-header__top {
     min-height: 82px;
+
+    padding-top: 16px;
+    padding-right: 48px;
+    padding-left: 42px;
+  }
+
+  .site-header__logo img {
+    width: 82px;
+    height: 17px;
   }
 
   .site-header__contacts a {
@@ -117,12 +130,21 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--tablet) {
   .site-header {
-    min-height: 492px;
+    min-height: 491px;
     background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, $main-block-red -46.69deg, $main-block-blue 32.24deg, $main-block-red 313.31deg, $main-block-blue 392.24deg);
   }
 
   .site-header__top {
     min-height: 55px;
+
+    padding-top: 2px;
+    padding-right: 16px;
+    padding-left: 14px;
+  }
+
+  .site-header__logo img {
+    width: 68px;
+    height: 15px;
   }
 
   .site-header__contacts a {

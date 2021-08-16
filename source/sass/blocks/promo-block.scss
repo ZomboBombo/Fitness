@@ -2,9 +2,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  max-width: 1160px;
   min-height: 500px;
 
   margin-top: 120px;
+  margin-left: 11px;
 
   background-color: $promo-block-red;
 }
@@ -12,7 +14,7 @@
 .promo-block__column {
   &--first {
     padding: 0;
-    padding-top: 86px;
+    padding-top: 83px;
     padding-right: 78px;
     padding-left: 78px;
   }
@@ -35,9 +37,18 @@
   color: $white;
 }
 
+.promo-block__event-info div {
+  margin-bottom: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .promo-block__event-info-title {
   margin: 0;
   padding: 0;
+  padding-bottom: 2px;
 
   font-family: $primary-font;
   font-weight: 400;
@@ -55,7 +66,7 @@
   font-family: $primary-font;
   font-size: 40px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 48px;
   color: $white;
 
 
@@ -73,7 +84,7 @@
 
 .promo-block__description {
   margin: 0;
-  margin-top: 32px;
+  margin-top: 9px;
   padding: 0;
 
   font-family: $primary-font;
@@ -84,9 +95,9 @@
 }
 
 .promo-block__request-button {
-  min-height: 68px;
+  min-height: 71px;
 
-  margin-top: 54px;
+  margin-top: 45px;
   margin-bottom: 20px;
 }
 
@@ -101,6 +112,9 @@
 @media (max-width: $width--desktop) {
   .promo-block {
     min-height: 292px;
+
+    margin-top: 100px;
+    margin-left: 0;
   }
 
   .promo-block__title {
@@ -112,20 +126,26 @@
 
   .promo-block__column {
     &--first {
-      padding-top: 52px;
-      padding-right: 45px;
+      padding-top: 49px;
+      padding-right: 41px;
       padding-left: 45px;
     }
   }
 
+  .promo-block__event-info div {
+    margin-bottom: 0;
+  }
+
   .promo-block__event-info-title {
+    padding-bottom: 0;
+
     font-size: 12px;
     line-height: 18px;
   }
 
   .promo-block__event-info-content {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 30px;
 
 
     &--small-text {
@@ -142,8 +162,8 @@
   }
 
   .promo-block__request-button {
-    min-height: 40px;
-    margin-top: 36px;
+    min-height: 42px;
+    margin-top: 29px;
   }
 
   .promo-block__image {
@@ -162,13 +182,14 @@
 
     max-width: 632px;
 
+    margin-top: 70px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .promo-block__column {
     &--first {
-      padding-bottom: 52px;
+      padding-bottom: 30px;
     }
   }
 

@@ -54,7 +54,7 @@
             </ul>
           </div>
 
-          <a href="#" class="button main-block__purchase-button" title="Перейти к секции «Абонементы»" aria-label="Перейти к секции «Абонементы»">Купить абонемент</a>
+          <a href="#subscriptions-section" class="button main-block__purchase-button" title="Перейти к секции «Абонементы»" aria-label="Перейти к секции «Абонементы»">Купить абонемент</a>
         </div>
 
         <div class="main-block__column main-block__column--second">
@@ -100,9 +100,9 @@
 
         <div class="gym-section__column gym-section__column--second">
           <picture>
+            <source type="image/webp" media="(max-width: 450px)" srcset="img/gym--mobile.webp, img/gym--mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym--tablet.webp, img/gym--tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/gym--desktop.webp, img/gym--desktop@2x.webp 2x">
-            <source type="image/webp" srcset="img/gym--tablet.webp, img/gym--table@2x.webp 2x">
-            <source type="image/webp" srcset="img/gym--mobile.webp, img/gym--mobile@2x.webp 2x">
 
             <!--
               *** Десктоп: w-660px, h-401px
@@ -115,8 +115,8 @@
           <div class="gym-section__fake-video-container fake-video-container">
             <div class="fake-video-container__inner-wrapper">
               <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/video-preview-gym--mobile.webp, img/video-preview-gym--mobile@2x.webp 2x">
                 <source type="image/webp" srcset="img/video-preview-gym.webp, img/video-preview-gym@2x.webp 2x">
-                <source type="image/webp" srcset="img/video-preview-gym--mobile.webp, img/video-preview-gym--mobile@2x.webp 2x">
 
                 <!--
                   *** Десктоп: w-364px, h-222px
@@ -138,8 +138,8 @@
         </div>
       </section>
 
-      <div class="site-main-content__color-section">
-        <section class="subscriptions" id="subscriptions-section">
+      <div class="site-main-content__color-section site-main-content__color-section--subscriptions" id="subscriptions-section">
+        <section class="subscriptions">
           <div class="container subscriptions__wrapper">
             <h2 class="section-title subscriptions__title">Абонементы</h2>
 
@@ -387,8 +387,8 @@
 
           <div class="promo-block__column">
             <picture>
+              <source type="image/webp" media="(max-width: 400px)" srcset="img/super-games--mobile.webp, img/super-games--mobile@2x.webp 2x">
               <source type="image/webp" srcset="img/super-games.webp, img/super-games@2x.webp 2x">
-              <source type="image/webp" srcset="img/super-games--mobile.webp, img/super-games--mobile@2x.webp 2x">
 
               <!--
                 *** Десктоп: w-660px, h-500px
@@ -403,7 +403,7 @@
       <section class="container slider trainers">
         <h2 class="section-title trainers__title">Тренеры</h2>
 
-        <div class="slider__track">
+        <div class="slider__track trainers__slider-track">
           <div class="slider__toggles">
             <div class="slider__toggles-wrapper">
               <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
@@ -691,7 +691,7 @@
         </div>
       </section>
 
-      <div class="site-main-content__color-section">
+      <div class="site-main-content__color-section site-main-content__color-section--advantages">
         <section class="container container--advantages advantages">
           <h2 class="section-title advantages__title">Наши преимущества</h2>
 
@@ -767,15 +767,15 @@
                 <b>4999</b>
               </p>
 
-              <p class="discounts__main-offer-text">Безлимитный абонемент в тренажерный зал</p>
+              <p class="discounts__main-offer-text">Безлимитный абонемент в&nbsp;тренажерный зал</p>
 
               <a href="#" class="discounts__main-offer-link" title="Перейти на страницу с подробной информацией об акции" aria-label="Перейти на страницу с подробной информацией об акции">Подробнее</a>
             </div>
 
             <picture>
+              <source type="image/webp" media="(max-width: 460px)" srcset="img/fitness-girl--mobile.webp, img/fitness-girl--mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/fitness-girl--tablet.webp, img/fitness-girl--tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/fitness-girl--desktop.webp, img/fitness-girl--desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/fitness-girl--tablet.webp, img/fitness-girl--table@2x.webp 2x">
-              <source type="image/webp" srcset="img/fitness-girl--mobile.webp, img/fitness-girl--mobile@2x.webp 2x">
 
               <!--
                 *** Десктоп: w-280px, h-462px
@@ -814,13 +814,13 @@
         <div class="slider__track reviews__slider-track">
           <div class="slider__toggles">
             <div class="slider__toggles-wrapper">
-              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
+              <button type="button" class="swiper-button-prev slider__toggle-button slider__toggle-button--previous reviews__slider-toggle reviews__slider-toggle--previous" title="Предыдущая группа слайдов" aria-label="Предыдущая группа слайдов">
                 Предыдущий
                 <svg width="16" height="32" class="slider__toggle-button-icon">
                   <use xlink:href="#icon-slider-toggle"></use>
                 </svg>
               </button>
-              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
+              <button type="button" class="swiper-button-next slider__toggle-button slider__toggle-button--next reviews__slider-toggle reviews__slider-toggle--next" title="Следующая группа слайдов" aria-label="Следующая группа слайдов">
                 Следующий
                 <svg width="16" height="32" class="slider__toggle-button-icon slider__toggle-button-icon--next">
                   <use xlink:href="#icon-slider-toggle"></use>
@@ -868,9 +868,9 @@
                   </picture>
 
                   <div class="review-card__body">
-                    <span>Георгий Георгиевич</span>
+                    <span>Борис Борис</span>
 
-                    <p>«В сие заведение начал ходить совсем недавно, но уже успел влюбиться!!! Много разного высококлассного оборудования, современные тренажёры, отзывчивый персонал!!! Ставлю вашему фитнес-центру 10/10!!! Обязательно повосетую всем своим друзьям!!!»</p>
+                    <!-- <p>«В сие заведение начал ходить совсем недавно, но уже успел влюбиться!!! Много разного высококлассного оборудования, современные тренажёры, отзывчивый персонал!!! Ставлю вашему фитнес-центру 10/10!!! Обязательно повосетую всем своим друзьям!!!»</p> -->
                   </div>
                 </article>
               </li>

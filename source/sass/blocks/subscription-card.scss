@@ -5,8 +5,7 @@
 
   margin: 0;
   padding: 0;
-  padding-top: 68px;
-  padding-bottom: 68px;
+  padding-top: 56px;
 
   width: 100%;
   min-height: 448px;
@@ -38,7 +37,7 @@
 
 .subscription-card__title-box span {
   margin: 0;
-  margin-top: 22px;
+  margin-top: 10px;
   padding: 0;
 
   font-family: $primary-font;
@@ -54,7 +53,7 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 96px;
+  margin-top: 65px;
 }
 
 .subscription-card__price p {
@@ -75,8 +74,8 @@
     content: attr(data-content);
 
     position: absolute;
-    top: -60px;
-    left: -20px;
+    top: -54px;
+    left: -19px;
     z-index: -1;
 
     width: 100%;
@@ -104,11 +103,11 @@
 
 .subscription-card__purchase-button {
   width: 100%;
-  max-width: 206px;
-  min-height: 64px;
+  max-width: 208px;
+  min-height: 66px;
 
   margin: 0;
-  margin-top: 60px;
+  margin-top: 34px;
   padding: 0;
 
   color: $main-text-color;
@@ -142,11 +141,20 @@
 ==================================
 */
 
-// *** ширина вьюпорта "Планшет" ***
+// *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
+  .subscription-card {
+    min-height: 384px;
+    padding-top: 44px;
+  }
+
   .subscription-card__title-box p {
     font-size: 22px;
     line-height: 24px;
+  }
+
+  .subscription-card__price {
+    margin-top: 54px;
   }
 
   .subscription-card__price p {
@@ -157,5 +165,16 @@
       font-size: 80px;
       line-height: 120px;
     }
+  }
+
+  .subscription-card__price svg {
+    width: 24px;
+    height: 33px;
+
+    margin-left: 10px;
+  }
+
+  .subscription-card__purchase-button {
+    margin-top: 29px;
   }
 }

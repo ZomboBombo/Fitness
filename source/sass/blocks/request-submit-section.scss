@@ -4,7 +4,9 @@
 
 .request-submit-section__content {
   width: 100%;
-  max-width: 410px;
+  max-width: 414px;
+
+  margin-right: 176px;
 }
 
 .request-submit-section__title {
@@ -21,6 +23,7 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .request-submit-section__content {
-    max-width: 472px;
+    max-width: 502px;
+    margin-right: 0;
   }
 }

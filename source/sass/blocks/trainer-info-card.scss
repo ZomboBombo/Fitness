@@ -12,7 +12,7 @@
 
 .trainer-info-card span {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
 
   display: block;
 
@@ -57,4 +57,23 @@
 .trainer-info-card a:hover > span,
 .trainer-info-card a:focus > span {
   display: none;
+}
+
+
+/*
+==================================
+--------- МЕДИАВЫРАЖЕНИЯ ---------
+==================================
+*/
+
+// *** ширина вьюпорта "Мобильный" ***
+@media (max-width: $width--tablet) {
+  .trainer-info-card {
+    width: auto;
+    height: auto;
+  }
+
+  .trainer-info-card img {
+    width: 226px;
+  }
 }

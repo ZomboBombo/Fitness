@@ -112,6 +112,7 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .fake-video-container {
+    top: 261px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -134,7 +135,7 @@
 }
 
 
-// *** ширина вьюпорта "Планшет" ***
+// *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
   .fake-video-container {
     position: static;

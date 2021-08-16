@@ -14,25 +14,26 @@
 
   display: none;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  column-gap: 35px;
 
-  width: 100%;
-  max-width: 342px;
+  width: auto;
+  max-width: 370px;
 
   margin: 0 auto;
+  margin-top: 34px;
 
 
   &::after {
     content: "";
 
     position: absolute;
-    bottom: -2px;
+    bottom: -11px;
     left: 50%;
     transform: translate(-50%);
 
     width: 100%;
-    max-width: 364px;
+    max-width: 325px;
     height: 2px;
 
     background-color: rgba(120, 120, 120, 0.2);
@@ -79,7 +80,7 @@
     content: "";
 
     position: absolute;
-    bottom: -2px;
+    bottom: -11px;
     left: 0;
     z-index: 2;
 
@@ -102,7 +103,7 @@
 }
 
 .subscriptions__card-board {
-  margin-top: 40px;
+  margin-top: 49px;
 }
 
 .subscriptions__card-list {
@@ -110,7 +111,11 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 22px;
   justify-content: space-between;
+
+  padding-right: 11px;
+  padding-left: 11px;
 
 
   &--js-active {
@@ -165,6 +170,8 @@
 @media (max-width: $width--desktop) {
   .subscriptions__tab-list {
     max-width: 342px;
+    column-gap: 41px;
+    margin-top: 28px;
 
     &::after {
       max-width: 354px;
@@ -174,6 +181,10 @@
   .subscriptions__tab {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  .subscriptions__card-board {
+    margin-top: 55px;
   }
 
   .subscriptions__card-list {
@@ -197,6 +208,13 @@
     align-items: center;
 
     max-width: 100%;
+
+    margin-bottom: 40px;
+  }
+
+  .subscriptions__decorative-image {
+    right: 0;
+    bottom: -113px;
   }
 }
 
@@ -204,7 +222,10 @@
 // *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
   .subscriptions__tab-list {
+    column-gap: 27px;
     max-width: 290px;
+    margin-top: 22px;
+
 
     &::after {
       max-width: 312px;
@@ -214,6 +235,14 @@
   .subscriptions__tab {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .subscriptions__card-board {
+    margin-top: 45px;
+  }
+
+  .subscriptions__card-list li {
+    margin-bottom: 35px;
   }
 
   .subscriptions__decorative-image {
