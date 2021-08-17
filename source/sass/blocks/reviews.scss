@@ -22,6 +22,7 @@
 .reviews__slider-toggle {
   position: absolute;
   top: 120px;
+  transform: none;
 
   &--previous {
     left: -70px;
@@ -69,6 +70,24 @@
 
 
 /*
+*** Стили для интерактивности
+*/
+.reviews__slider-toggle:hover,
+.reviews__slider-toggle:focus {
+  transform: scale(1.15);
+}
+
+.reviews__slider-toggle:active {
+  transform: scale(1);
+  opacity: 0.7;
+}
+
+.reviews__slider-toggle:hover:disabled {
+  transform: none;
+}
+
+
+/*
 ==================================
 --------- МЕДИАВЫРАЖЕНИЯ ---------
 ==================================
@@ -80,7 +99,7 @@
     margin-top: 99px;
   }
 
- .reviews__slider-track {
+  .reviews__slider-track {
     margin-top: 40px;
   }
 
@@ -110,7 +129,7 @@
     margin-top: 68px;
   }
 
- .reviews__slider-track {
+  .reviews__slider-track {
     margin-top: 43px;
   }
 
