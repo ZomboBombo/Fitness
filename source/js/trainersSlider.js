@@ -21,7 +21,7 @@ window.trainersSlider = (() => {
   const trainersSliderTrack = document.querySelector('.slider__track');
   const trainersTogglesBlock = trainersSliderTrack.querySelector('.slider__toggles');
   const trainersList = trainersSliderTrack.querySelector('.trainers__list');
-  const swiperSlides = trainersList.querySelectorAll('li');
+  const swiperSlides = trainersSliderTrack.querySelectorAll('.trainers__list > li');
 
 
   /*
