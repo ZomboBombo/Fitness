@@ -30,6 +30,7 @@ const rename = require('gulp-rename');
 const del = require('del');
 const pipeline = require('readable-stream').pipeline;
 const mergeStream = require('merge-stream');
+const { stream } = require('browser-sync');
 
 // --- Серверные утилиты ---
 const server = require('browser-sync').create();
@@ -55,7 +56,7 @@ task('html', () => {
 
 // *** Обработка всех SCSS-файлов и преобразование их в CSS-файлы ***
 task('css', () => {
-  const mainCss = pipeline(
+  return pipeline(
     src('source/sass/styles.scss'),
     plumber(),
     sourcemap.init(),
@@ -69,34 +70,24 @@ task('css', () => {
     dest('build/css'),
     server.stream()
   );
-
-  const vendorCss = pipeline(
-    src('source/vendor-css/**/*.css'),
-    dest('build/css/vendor/')
-  );
-
-  return mergeStream(mainCss, vendorCss);
 });
 
 
 // *** Сборка всех JS-файлов ***
-
-/* --- основные скрипты — main.js --- */
-task('js', () => {
-  return pipeline(
+task('js', () =>{
+  const mainJs = pipeline(
     src('source/js/*.js'),
     concat('main.js'),
     dest('build/js')
   );
-});
 
-/* --- библиотеки — vendor.js --- */
-task('vendorjs', () => {
-  return pipeline(
+  const vendorJs = pipeline(
     src('source/js/vendor/*.js'),
     concat('vendor.js'),
     dest('build/js')
   );
+
+  return mergeStream(mainJs, vendorJs);
 });
 
 
@@ -185,5 +176,5 @@ task('refresh', (done) => {
 
 
 // === Основные задачи для Сборки проекта в 'продакшн' и поднятие Сервера ===
-task('build', series('clean', 'copy', 'css', 'js', 'vendorjs', 'sprite', 'html'));
+task('build', series('clean', 'copy', 'css', 'js', 'sprite', 'html'));
 task('start', series('build', 'server'));
