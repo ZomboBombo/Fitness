@@ -1,11 +1,17 @@
 /* ***********************
 *** 1. Служебные стили ***
 *********************** */
+
+// --- 1.1) Главные служебные стили ---
 @import "normalize.scss";
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
+
+// --- 1.2) Стили сторонних библиотек ---
+@import "vendor/swiper-vars.scss";
+@import "vendor/swiper.scss";
 
 
 /* ***************************

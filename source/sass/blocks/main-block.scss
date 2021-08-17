@@ -46,7 +46,7 @@
   font-size: 109px;
   line-height: 109px;
   text-align: right;
-  color: #FFFFFF;
+  color: $white;
 
   // --- Мини-настройка для эффекта утолщения текста с помощью внешней обводки ---
   text-shadow: -2px -2px 0 $white, 2px -2px 0 $white, 2px 2px 0 $white, -2px 2px 0 $white;
