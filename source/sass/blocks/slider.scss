@@ -30,6 +30,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
+
+  width: 80px;
+  height: 100%;
 
   font-size: 0;
 
@@ -51,13 +55,13 @@
   // --- Мини-настройка для переопределения дефолтных стилей «Swiper»: КОНЕЦ ---
 
   &--previous {
-    left: -52px;
-    background-image: linear-gradient(to right, rgba($white, 0.5) 0%, transparent 100%);
+    left: 0;
+    background-image: linear-gradient(to right, $white 0%, $white 50%, transparent 100%);
   }
 
   &--next {
-    right: -54px;
-    background-image: linear-gradient(to left, rgba($white, 0.5) 0%, transparent 100%);
+    right: 0;
+    background-image: linear-gradient(to left, $white 0%, $white 50%, transparent 100%);
   }
 }
 
@@ -75,7 +79,7 @@
 */
 .slider__toggle-button:hover,
 .slider__toggle-button:focus {
-  transform: scale(1.15) translateY(-50%);
+  transform: scale(1.02) translateY(-50%);
 }
 
 .slider__toggle-button:active {

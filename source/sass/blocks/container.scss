@@ -4,6 +4,11 @@
 
   margin: 0 auto;
   padding: 0;
+
+
+  &--trainers {
+    max-width: $width--max;
+  }
 }
 
 

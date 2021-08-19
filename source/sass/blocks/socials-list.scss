@@ -3,22 +3,30 @@
 
   display: flex;
   flex-wrap: wrap;
-  column-gap: 25px;
-  row-gap: 20px;
 
-  min-width: 110px;
+  width: 100%;
+  max-width: 126px;
 
   margin-top: -4px;
-  margin-right: 28px;
+  margin-right: 10px;
   margin-left: auto;
 }
 
 .socials-list li {
-  flex-grow: 1;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  margin-right: 25px;
+  margin-bottom: 20px;
+
+  &:nth-child(3n),
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .socials-list a {
@@ -97,13 +105,24 @@
 // *** ширина вьюпорта "Планшет" ***
 @media (max-width: $width--desktop) {
   .socials-list {
-    column-gap: 21px;
-
     max-width: 112px;
 
     margin-right: 0;
-    margin-top: 0;
+    margin-top: -5px;
     margin-left: auto;
+    padding-left: 10px;
+  }
+
+  .socials-list li {
+    width: 24px;
+    height: 24px;
+    
+    margin-right: 14px;
+    
+    &:nth-child(3n),
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -111,23 +130,30 @@
 // *** ширина вьюпорта "Мобильный" ***
 @media (max-width: $width--tablet) {
   .socials-list {
-    column-gap: 40px;
-
     max-width: 100%;
 
     margin-top: 36px;
     margin-left: 0;
+    padding-left: 0;
   }
 
   .socials-list li {
-    flex-grow: 0;
+    width: 31px;
+    height: 27px;
+
+    margin-right: 34px;
+
+
+    &:nth-child(3n) {
+      margin-right: 34px;
+    }
   }
 
   .socials-list a {
     display: inline-block;
 
-    width: 27px;
-    height: 27px;
+    width: 100%;
+    height: 100%;
 
     vertical-align: middle;
   }

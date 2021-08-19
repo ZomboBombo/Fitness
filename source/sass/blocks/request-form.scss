@@ -17,7 +17,7 @@
   display: block;
 
   width: 100%;
-  max-width: 190px;
+  max-width: 192px;
 
   margin: 0;
   margin-right: 30px;
@@ -33,11 +33,17 @@
 
   background-color: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid $contacts-border;
 
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &::placeholder {
+    color: $white;
+    opacity: 0.5;
   }
 }
 

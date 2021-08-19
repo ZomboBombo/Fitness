@@ -105,6 +105,10 @@
   padding-bottom: 30px;
 
   border: 7px solid transparent;
+  border-top-color: $discounts-red;
+  border-right-color: $discounts-blue;
+  border-bottom-color: $discounts-blue;
+  border-left-color: $discounts-red;
   border-image-source: linear-gradient(148.82deg, $discounts-red 0.85%, $discounts-blue 100%);
   border-image-slice: 1;
 }

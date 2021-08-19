@@ -1,13 +1,24 @@
 .trainers {
   margin-top: 118px;
   padding-bottom: 120px;
+
+  border-top: 1px solid transparent;
 }
 
 .trainers__title {
-  margin-left: 13px;
+  max-width: $width--desktop;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 13px;
 }
 
 .trainers__slider-track {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.trainers__slides-container {
   max-width: 1180px;
 }
 
@@ -58,10 +69,11 @@
 @media (max-width: $width--desktop) {
   .trainers {
     margin-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 88px;
   }
 
   .trainers__title {
+    margin-left: 0;
     text-align: center;
   }
 
